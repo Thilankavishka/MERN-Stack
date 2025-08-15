@@ -8,7 +8,7 @@ const postGoals = (req,res) => {
 
 
 }
-/*const putGoals = (req,res) => {
+const putGoals = (req,res) => {
     
    res.json({message: `helloo i am the update message route my id is  ${req.params.id}`})
 
@@ -20,7 +20,7 @@ const deleteGoals = (req,res) => {
 res.json({message: `helloo i am the delete message route my id is  ${req.params.id}`})
 
 }
-*/
+
 module.exports = {
-    getGoals,postGoals
+    getGoals,postGoals,putGoals,deleteGoals
 }
