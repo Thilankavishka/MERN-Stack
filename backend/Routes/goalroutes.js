@@ -5,7 +5,6 @@ const {postGoals} = require('../Controllers/goalcontroller')
 const {putGoals} = require('../Controllers/goalcontroller')
 const {deleteGoals} = require('../Controllers/goalcontroller')
 
-
 route.get("/message",getGoals)
 route.post("/postmessage",postGoals)
 route.put("/update/:id",putGoals)
