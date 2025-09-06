@@ -44,7 +44,17 @@ const putGoals = async (req,res) => {
 
 const deleteGoals = async (req,res) => {
     
-res.json({message: `helloo i am the delete message route my id is  ${req.params.id}`})
+
+const finddata = await Goal.findById(req.params.id)
+
+
+   if(!finddata){
+      res.status(400)
+      throw new Error('Goal not found')
+   }
+   
+   await Goal.findByIdAndDelete(finddata)
+   res.json({ message:"Goal id removed",id:req.params.id})
 }
 
 
