@@ -1,6 +1,7 @@
 const aysnchandler = require('express-async-handler')
 
 const Goal = require('../Model/GoalModel')
+const User = require('../Model/UserModel')
 
 const getGoals = aysnchandler(async (req,res) => {
 
